@@ -1,0 +1,16 @@
+@import 'base/normalize';
+@import 'base/typographi';
+@import 'base/utilities';
+@import 'themes/theme-default';
+@import 'themes/theme-dark';
+
+
+.theme {
+    &--default {
+        --primary-color: #{$primary-color};
+    }
+
+    &--dark {
+        --primary-color: #{$gray-color-3};
+    }
+}
