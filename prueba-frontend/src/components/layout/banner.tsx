@@ -1,0 +1,9 @@
+import React from 'react'
+
+export const Banner = () => {
+  return (
+    <section>
+        <img src="https://images.unsplash.com/photo-1517252441880-7c0968fc8513?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="hotel views" />
+    </section>
+  )
+}

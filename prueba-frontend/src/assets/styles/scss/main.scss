@@ -3,11 +3,14 @@
 @import 'base/utilities';
 @import 'themes/theme-default';
 @import 'themes/theme-dark';
+@import 'pages/mainPage';
 
 
 .theme {
     &--default {
         --primary-color: #{$primary-color};
+        --primary-background: #{$primary-background};
+        --secondary-gray: #{$secondary-gray};
     }
 
     &--dark {

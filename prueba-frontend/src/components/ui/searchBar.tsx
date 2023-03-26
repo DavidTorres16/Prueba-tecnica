@@ -2,8 +2,8 @@ import React from 'react'
 import { useAppDispatch, useAppSelector } from '@app/hooks';
 import {useEffect, useState} from "react";
 import { Search } from './Search';
-import { hotelSearch } from './hotelSearch';
-import { roomSearch } from './roomSearch';
+import { hotelSearch } from '../layout/hotelSearch';
+import { roomSearch } from '../layout/roomSearch';
 import { toggleSearch } from '@features/pageState/pageState';
 
 export const SearchBar = () => {
