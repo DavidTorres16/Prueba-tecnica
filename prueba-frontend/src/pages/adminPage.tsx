@@ -1,4 +1,5 @@
 import { Banner } from '@components/layout/banner'
+import { Search } from '@components/layout/search'
 import React from 'react'
 
 export const AdminPage = () => {
@@ -13,11 +14,12 @@ export const AdminPage = () => {
   return (
     <>
         <Banner 
-          titleColor= 'primary'
+          titleColor= 'secondary'
           titleValue= 'Modo administrador'
-          subtitleColor= 'primary'
+          subtitleColor= 'secondary'
           subtitleValue= 'Aquí podrás administrar tus hoteles y habitaciones con facilidad'
         />
+        <Search/>
         <div>adminView</div>
     </>
     

@@ -54,9 +54,9 @@ export const MainPage = () => {
         <main className='main'>
             <Banner 
                 titleValue='Descubre los mejores hospedajes'
-                titleColor='primary'
+                titleColor='secondary'
                 subtitleValue='Nuestros hoteles te ofrecen una experiencia inolvidable'
-                subtitleColor='primary'
+                subtitleColor='secondary'
             />
             <Search/>
             <div>
