@@ -1,11 +1,16 @@
 import React from 'react';
 import { useEffect, useState } from "react";
-import {SearchBar} from '@components/ui/searchBar';
+import { SearchBar } from '@components/ui/searchBar';
 import { Banner } from '@components/layout/banner';
-import { GeneralCard } from '@components/ui/GeneralCard';
+import { useAppDispatch } from '@app/hooks';
+import { toggleTheme } from '@features/theme/themeSlice';
+import { Search } from '@components/layout/search';
 import { hotelInterface, roomInterface, dataInterface } from '@app/interface/general.interfaces';
+import { GeneralCard } from '@components/ui/GeneralCard';
 
 export const MainPage = () => {
+
+    const dispatch = useAppDispatch()
 
     const hotel: hotelInterface ={
         id:1,
@@ -15,29 +20,41 @@ export const MainPage = () => {
         adress:'unknown'    
     }
 
-    const dataObject = {data: hotel}
-    
+    const habitaciones: roomInterface = {
+        id:1,
+        roomNumber: 1,
+        baseCost:600,
+        taxes:10,
+        roomType:"De lujo",
+        hotelId:1,
+        userId:1
+    }
 
-    const arrayHoteles: hotelInterface[] = [
-        hotel,
-        hotel,
-        hotel
+    const arrayDatos: dataInterface[] = [
+        {data:hotel},
+        {data:hotel},
+        {data:hotel},
+        {data:habitaciones},
+        {data:habitaciones},
+        {data:habitaciones}
     ] 
 
     return (
-    <div className='theme--default main'>
-        <Banner/>
-        <h1>Busqueda</h1>
-        <div>
-            <SearchBar/>
-        </div>
-        <div>
-            {
-                arrayHoteles.map((hotel)=>(
-                    <GeneralCard {...dataObject}/>
-                ))
-            }
-        </div>
-    </div>
+        <main className='main'>
+            <Banner />
+            <Search/>
+            <div>
+                {
+                    arrayDatos.map((data) =>(
+                        <GeneralCard prop={data}/>
+                    ))
+                }
+            </div>
+            {/* <div> */}
+            {/* <h1>Busqueda</h1> */}
+                {/* <SearchBar /> */}
+                {/* <button onClick={e => dispatch(toggleTheme())}>Change theme</button> */}
+            {/* </div> */}
+        </main>
     )
 }
