@@ -3,6 +3,7 @@ import { MainPage } from '@pages/mainPage'
 import './App.css'
 import { useAppSelector } from '@app/hooks'
 import { RootState } from '@app/store'
+import { SingIn } from '@pages/SingIn'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<MainPage/>}/>
+          <Route path='/sing-in' element={<SingIn/>}/>
         </Routes>
       </BrowserRouter>
     </div>

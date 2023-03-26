@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FormEvent } from 'react'
 import { useAppDispatch, useAppSelector } from '@app/hooks';
 import { useEffect, useState } from "react";
 import { Search } from './Search';
@@ -7,6 +7,7 @@ import { roomSearch } from '../layout/roomSearch';
 import { toggleSearch } from '@features/pageState/pageState';
 import { InputSearch } from './InputSearch';
 import { toggleTheme } from '@features/theme/themeSlice';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const SearchBar = () => {
     //let renderSearch = null
@@ -16,11 +17,17 @@ export const SearchBar = () => {
     const componetHotel = Search(hotelSearch, seachText)
     const componentRoom = Search(roomSearch, seachText)
 
+    const handleSearch = (event: FormEvent) : void => {
+        event.preventDefault()
+    }
+
     return (
         <div>
-            {/* <Input title='Test' type="text" value={seachText} onChange={(e: any) => setSeachText(e.target.value)} /> */}
-            <InputSearch 
+
+            <InputSearch
+                onAction={handleSearch}
                 type='text'
+                placeholder='¿Que estas buscando?'
             />
             <h1>{isHotelSearch}</h1>
             {isHotelSearch

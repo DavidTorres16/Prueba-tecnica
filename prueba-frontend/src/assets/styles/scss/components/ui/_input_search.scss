@@ -1,10 +1,40 @@
 .input__search__container {
-    background: var(--grey-color-200);
+    background: var(--grey-color-100);
     padding: 18px;
-    border-radius: 100px;
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: space-between;
 
     .input__search__app {
         border: none;
         background: transparent;
+        outline: none;
+        font-size: 22px;
+        font-weight: 500;
+        font-family: var(--primary-font);
+
+        &:hover::placeholder {
+            color: var(--grey-color-200);
+        }
+
+        &::placeholder {
+            color: var(--grey-color-300);
+        }
+    }
+
+    .input__search__button {
+        border-radius: 50px;
+        background: #000000;
+        border: none;
+        color: #FFFF;
+        padding: 10px 40px;
+        font-family: var(--primary-font);
+        font-size: 18px;
+
+        &:hover {
+            cursor: pointer;
+            background: var(--grey-color-900);
+        }
     }
 }
