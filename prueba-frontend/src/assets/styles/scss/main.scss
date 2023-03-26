@@ -4,6 +4,7 @@
 @import 'themes/theme-default';
 @import 'themes/theme-dark';
 @import 'pages/mainPage';
+@import 'components/ui/generalCard';
 
 
 .theme {
@@ -11,6 +12,8 @@
         --primary-color: #{$primary-color};
         --primary-background: #{$primary-background};
         --secondary-gray: #{$secondary-gray};
+        --gray-3: #{$terciary-gray};
+        --shadows-gray: #{$shadows-gray};
     }
 
     &--dark {
