@@ -26,6 +26,8 @@
 .theme {    
     &--default {
         --primary-color: #{$primary-color};
+        --secondary-color: #{$secondary-color};
+
         --primary-background: #{$primary-background};
         --secondary-gray: #{$secondary-gray};
         

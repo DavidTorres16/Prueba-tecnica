@@ -3,7 +3,8 @@ export interface hotelInterface{
     name:string,
     country:string,
     city:string,
-    adress:string
+    adress:string,
+    img?:string
 }
 
 export interface roomInterface{
@@ -13,7 +14,8 @@ export interface roomInterface{
     taxes:number,
     roomType: string,
     hotelId:number,
-    userId?:number
+    userId?:number,
+    img?:string
 }
 
 export interface reserveInterface{

@@ -5,29 +5,39 @@
     flex-direction: row;
     align-items: center;
     border-radius: 20px;
-    padding: 40px;
-    background-color: var(--gray-3);
-    box-shadow: var(--gray-color-300) 2px 4px 9px;
+    background-color: #ffff;
+    box-shadow: var(--grey-color-200) 2px 4px 9px;
     gap: 20px;
+    color: var(--grey-color-500);
+    overflow: hidden;
+    height: 15em;
 
-    .cardBody{
+    .card__image{
+        width: 20em;
+        height:100%;
+        border-radius: 20px 0px 0px 20px;
+        object-fit: cover;
+    }
+
+    .card__body{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 30px;
 
-        .hotelName{
-            margin-right: 20px;
-        }
-
-
-        .cardLocationAdress{
+        .card__location__adress{
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
             justify-content: space-between;
+            border-bottom: 2px solid var(--primary-color);
+            padding: 20px 40px 20px 0px;
+            margin: 20px ;
+            gap: 15px;
 
-            .cardLocation{
+            .name{
+                color: var(--secondary-color);
+            }
+
+            .card__location{
                 display: flex;
                 flex-direction: row;
                 align-items: center;
