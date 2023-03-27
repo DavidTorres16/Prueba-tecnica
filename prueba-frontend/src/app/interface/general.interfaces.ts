@@ -26,3 +26,8 @@ export interface reserveInterface{
 export interface dataInterface {
     data: hotelInterface | roomInterface;
 }
+
+export interface SingInData {
+    name: string,
+    email: string
+}

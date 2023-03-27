@@ -13,12 +13,16 @@
 // Layout imports
 @import 'layout/banner';
 @import 'layout/search';
+@import 'layout/singin_form';
 
 // Ui components
 @import 'components/ui/generalCard';
 @import 'components/ui/title';
 @import 'components/ui/input';
 @import 'components/ui/input_search';
+@import 'components/ui/article';
+@import 'components/ui/center_section';
+@import 'components/ui/button';
 
 :root {
     --primary-font: $font-poppins;
