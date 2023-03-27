@@ -11,7 +11,7 @@ import { GeneralCard } from '@components/ui/GeneralCard';
 export const MainPage = () => {
 
     const dispatch = useAppDispatch()
-    const isHotelSearch = useAppSelector((state: any) => state.search.isHotelSearch)
+    const searchFilter = useAppSelector((state: any) => state.search.searchFilter)
 
     const hotel: hotelInterface ={
         id:1,
@@ -42,7 +42,7 @@ export const MainPage = () => {
         dataObject
     ] 
 
-    if(!isHotelSearch){
+    if(searchFilter == "Habitaciones"){
         arrayDatos = [
             dataObject2,
             dataObject2,

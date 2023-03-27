@@ -5,7 +5,7 @@ export interface InitialState {
 }
 
 export interface toggleTypeToSearch{
-    isHotelSearch : boolean 
+    searchFilter: string
 }
 
 export interface ThemeInterface {
