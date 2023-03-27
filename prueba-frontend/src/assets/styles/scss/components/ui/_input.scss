@@ -1,10 +1,9 @@
 .input__container {
     display: flex;
-    flex-direction: column-reverse;
     position: relative;
 
     .input__app {
-        width: 50%;
+        width: 100%;
         padding: 15px;
         font-size: 15px;
         outline: none;

@@ -29,6 +29,7 @@ export interface dataInterface {
     data: hotelInterface | roomInterface;
 }
 
+<<<<<<< HEAD
 export interface UserInterface {
     id:string
     name:string
@@ -39,3 +40,9 @@ export interface UserInterface {
     emai:string
     phoneNumber:string
 }
+=======
+export interface SingInData {
+    name: string,
+    email: string
+}
+>>>>>>> 4b81411363e2580373a2c5620563144ecf728a2b

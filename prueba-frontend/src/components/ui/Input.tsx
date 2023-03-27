@@ -1,24 +1,28 @@
-import { LegacyRef, RefObject, useRef } from "react";
+import { useRef } from "react";
+import { useField, ErrorMessage } from 'formik';
 
 type Props = {
-    type: 'text' | 'number' | 'email',
-    title?: string,
-    [key: string]: any;
+    label?: string;
+    name: string;
+    type?: string;
+    placeholder?: string;
 }
 
-export const Input = ({ type, title = 'Input', ...props }: Props) => {
-    const spanRef = useRef<HTMLSpanElement>(null)   
-    const inputRef = useRef<HTMLInputElement>(null)   
+export const Input: React.FC<Props> = ({ type, placeholder = 'Input', ...props }) => {
+    const spanRef = useRef<HTMLSpanElement>(null)
+    const inputRef = useRef<HTMLInputElement>(null)
+    const [field, meta] = useField(props);
     return (
         <div className='input__container'>
-            <span ref={spanRef} className='input__span'>{title}</span>
+            <span ref={spanRef} className='input__span'>{placeholder}</span>
             <input
                 className='input__app'
+                {...field}
+                {...props}
                 onFocus={e => spanRef.current?.classList.add('active')}
-                onBlur={e => !inputRef.current?.value ? spanRef.current?.classList.remove('active') : null}
                 ref={inputRef}
                 type={type}
-                {...props}
+            // onBlur={e => !inputRef.current?.value ? spanRef.current?.classList.remove('active') : null}
             />
         </div>
     )
