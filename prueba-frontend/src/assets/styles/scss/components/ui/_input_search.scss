@@ -15,6 +15,7 @@
         font-family: var(--primary-font);
 
         &:hover::placeholder {
+            transition: ease-in-out .4s;
             color: var(--grey-color-200);
         }
 
@@ -33,6 +34,7 @@
         font-size: 18px;
 
         &:hover {
+            transition: ease-in-out .4s;
             cursor: pointer;
             background: var(--grey-color-900);
         }

@@ -4,67 +4,75 @@ import { isHotel, isRoom } from '@app/interfaceValidators/generalnterfacesValida
 import { useAppSelector } from '@app/hooks'
 
 
-
-export const GeneralCard = (prop: dataInterface) => { 
+export const GeneralCard = ({data}: dataInterface) => { 
     
   return (
     <section className='card'>
         {
-            prop.data != null && isHotel(prop.data)?
+            data != null && isHotel(data)?
             <>
-                <img src={prop.data.img} alt="hotel image" className='card__image'/>
+                <img src={data.img} alt="hotel image" className='card__image'/>
                 <div className='card__body'>
                 
                     <section className='card__location__adress'>
                         <div className='name'>
-                            <h3>
-                                {prop.data.name }
-                            </h3>
+                            <p>
+                                {data.name }
+                            </p>
                         </div>
                         <div className='card__location'>
                             <div>
-                                <h4>
-                                    País: {prop.data.country}
-                                </h4>
-                                <h4>
-                                    Ciudad: {prop.data.city }
-                                </h4>
+                                <p>
+                                    País: 
+                                </p>
+                                <p>{data.country}</p>
+                            </div>
+                            <div>
+                                <p>
+                                    Ciudad: 
+                                </p>
+                                <p>{data.city }</p>
                             </div>
                         </div>
                         <div>
-                            <h4>
-                                Dirección: {prop.data.adress }
-                            </h4>
+                            <p>
+                                Dirección: 
+                            </p>
+                            <p>{data.adress }</p>
                         </div>
                     </section>
                 </div>
             </>
-            : prop.data != null && isRoom(prop.data)?
+            : data != null && isRoom(data)?
             <div className='card__body'>
 
-                <img src={prop.data.img} alt="room image" className='card__image'/>
+                <img src={data.img} alt="room image" className='card__image'/>
 
                 <section className='card__location__adress'>
                     <div className='name'>
-                        <h3>
-                            Numero habitación: {prop.data.roomNumber}
-                        </h3>
+                        <p>
+                            Numero habitación: {data.roomNumber}
+                        </p>
                     </div>
                     <div className='card__location'>
+                        <div >
+                            <p>
+                                Tipo habitación: 
+                            </p>
+                            <p>{data.roomType}</p>
+                        </div>
                         <div>
-                            <h4>
-                                Tipo habitación: {prop.data.roomType}
-                            </h4>
-
-                            <h4>
-                                Precio base: {prop.data.baseCost}
-                            </h4>
+                            <p>
+                                Precio base: 
+                            </p>
+                            <p>{data.baseCost}</p>
                         </div>
                     </div>
                     <div>
-                        <h4>
-                            impuesto por habitación: {prop.data.taxes}
-                        </h4>
+                        <p>
+                            impuesto por habitación: 
+                        </p>
+                        <p>{data.taxes}</p>
                     </div>
                 </section>
             </div>

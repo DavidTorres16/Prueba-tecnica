@@ -1,4 +1,26 @@
 .selector{
-    border: none;
-    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px var(--grey-color-200) solid;
+    color: var(--grey-color-400);
+    margin: 2em 0 0 0;
+    font-size: medium;
+    padding:1em;
+    appearance: none;
+    border-radius: 10px;
+    outline: none;
+    font-family: var(--primary-font);
+    transition: .4s ease-in-out ;
+
+    .selector__options{
+        color: var(--grey-color-600);
+    }
+
+    &:focus {
+        transition: .4s ease-in-out;
+        color: var(--grey-color-200);
+    }
+
 }
+

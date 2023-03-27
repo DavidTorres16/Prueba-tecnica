@@ -10,9 +10,11 @@ export const FilterSelector = ({data, title, onAction = () => {}}:selectorInfo) 
   return (
     <div>
         <select onChange={onAction} className="selector">
-            <option value="">{title}</option>
+            <option value="" disabled selected hidden>
+                {title}
+            </option>
             {data.map((option)=>(
-                <option value={option}>{option}</option>
+                <option value={option} className="selector__options">{option}</option>
             ))}
         </select>
     </div>

@@ -12,7 +12,7 @@ export const AdminPage = () => {
   }
     
   return (
-    <>
+    <main className='main'>
         <Banner 
           titleColor= 'secondary'
           titleValue= 'Modo administrador'
@@ -20,8 +20,6 @@ export const AdminPage = () => {
           subtitleValue= 'Aquí podrás administrar tus hoteles y habitaciones con facilidad'
         />
         <Search title='Busca el hotel que quieres administrar'/>
-        <div>adminView</div>
-    </>
-    
+    </main>
   )
 }

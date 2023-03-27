@@ -4,10 +4,22 @@ import { Article } from '@components/ui/Article'
 import { CenterSection } from '@components/ui/CenterSection'
 import { Title } from '@components/ui/Title'
 
+const bannerData = {
+    titleColor: 'secondary',
+    titleValue: 'Iniciar sesión',
+    subtitleColor: 'secondary',
+    subtitleValue: 'Antes de continuar inicia sesión con tu usuario y contraseña'
+}
+
 export const SingIn = () => {
     return (
         <main className='main__singin__form'>
-            <Banner />
+            <Banner 
+                titleColor = 'secondary'
+                titleValue = 'Iniciar sesión'
+                subtitleColor = 'secondary'
+                subtitleValue = 'Antes de continuar inicia sesión con tu usuario y contraseña'
+            />
             <CenterSection width='short'>
                 <Article>
                     <Title type='small' value='Ingresa' />

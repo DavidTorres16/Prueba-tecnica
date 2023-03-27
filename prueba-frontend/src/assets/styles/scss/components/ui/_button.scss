@@ -7,9 +7,11 @@
     border: none;
     font-size: 15px;
     outline: none;
+    transition: ease-in-out .3s;
 
     &:hover {
         cursor: pointer;
-        background: var(--grey-color-900);
+        background: var(--grey-color-800);
+        transition: ease-in-out .3s;
     }
 }

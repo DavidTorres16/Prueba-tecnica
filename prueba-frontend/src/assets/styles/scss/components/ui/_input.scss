@@ -1,6 +1,7 @@
 .input__container {
     display: flex;
     position: relative;
+    transition: ease-in-out .3s;
 
     .input__app {
         width: 100%;
@@ -12,10 +13,11 @@
         background: #ececec;
         color: var(--grey-color-600);
         font-family: var(--primary-font);
-
+        transition: ease-in-out .4s;
         transition: width 0.5s ease-out;
 
         &:hover {
+            transition: ease-in-out .4s;
             background: #f0f0f0;
         }
     }
@@ -32,5 +34,10 @@
         top: 2px;
         font-size: 12px;
         color: var(--primary-color);
+    }
+
+    &:hover {
+        transition: ease-in-out .4s;
+        background: #f0f0f0;
     }
 }

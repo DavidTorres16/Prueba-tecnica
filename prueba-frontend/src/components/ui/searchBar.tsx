@@ -48,20 +48,16 @@ export const SearchBar = () => {
                 placeholder='¿Que estas buscando?'
             />
             <div className='filter__box'>
+                <div className='filter__text'>
+                    <p>
+                        Seleccione un filtro de busqueda:
+                    </p>
+                </div>
                 <FilterSelector 
                     data = {selectorData}
                     title = 'Seleccione un filtro'
                     onAction={handleAction}
                 />
-                <section>
-                    {isHotelSearch
-                        ?
-                        componetHotel
-                        :
-                        componentRoom
-                    }
-                </section>
-                <button onClick={e => dispatch(toggleTheme())}>Toggle theme</button>
             </div>
         </div>
     )
