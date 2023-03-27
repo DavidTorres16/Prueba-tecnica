@@ -7,6 +7,7 @@ import { toggleTheme } from '@features/theme/themeSlice';
 import { Search } from '@components/layout/search';
 import { hotelInterface, roomInterface, dataInterface } from '@app/interface/general.interfaces';
 import { GeneralCard } from '@components/ui/GeneralCard';
+import { Header } from '@components/layout/Header';
 
 export const MainPage = () => {
 
@@ -52,6 +53,7 @@ export const MainPage = () => {
 
     return (
         <main className='main'>
+            <Header/>
             <Banner 
                 titleValue='Descubre los mejores hospedajes'
                 titleColor='secondary'
