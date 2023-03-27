@@ -1,0 +1,11 @@
+.search__filter__box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .filter__box{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+}

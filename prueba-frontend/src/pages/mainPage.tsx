@@ -58,7 +58,7 @@ export const MainPage = () => {
                 subtitleValue='Nuestros hoteles te ofrecen una experiencia inolvidable'
                 subtitleColor='secondary'
             />
-            <Search/>
+            <Search title='¿Qué deseas buscar?'/>
             <div>
                 {
                     arrayDatos.map((data) =>(

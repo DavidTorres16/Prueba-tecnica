@@ -1,11 +1,11 @@
 import {configureStore,ThunkAction, Action} from '@reduxjs/toolkit'
-import searchSlice from '@features/pageState/pageState';
-import counterReducer from '@features/counter/slice';
+import searchSlice from '@features/pageState/searchSlice';
+import permissionsSlice from '@features/counter/slice';
 import themeSlice from '@features/theme/themeSlice';
 
 export const store = configureStore({
     reducer:{
-        counter : counterReducer,
+        user : permissionsSlice,
         search : searchSlice,
         theme: themeSlice
     }

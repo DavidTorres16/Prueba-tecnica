@@ -19,7 +19,7 @@ export const AdminPage = () => {
           subtitleColor= 'secondary'
           subtitleValue= 'Aquí podrás administrar tus hoteles y habitaciones con facilidad'
         />
-        <Search/>
+        <Search title='Busca el hotel que quieres administrar'/>
         <div>adminView</div>
     </>
     

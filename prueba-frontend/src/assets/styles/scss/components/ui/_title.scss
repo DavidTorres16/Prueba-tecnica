@@ -1,6 +1,10 @@
 .title__app {
     font-size: 17px;
     color: var(--grey-color-100);
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .primary {
@@ -8,7 +12,7 @@
 }
 
 .secondary {
-    color: var(--secondary-gray);
+    color: var(--grey-color-100);
 }
 
 .big {

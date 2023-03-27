@@ -1,16 +1,17 @@
-import {createSlice, createAsyncThunk} from '@reduxjs/toolkit'
+import {createSlice, createAsyncThunk, PayloadAction} from '@reduxjs/toolkit'
 import { toggleTypeToSearch } from '@app/interface/slices.interfaces'
+import { Value } from 'sass';
 
 const initialState: toggleTypeToSearch = {
-    isHotelSearch : true
+    searchFilter : "hoteles"
 }
 
 export const searchSlice = createSlice({
     name : "isHotelSearch",
     initialState,
     reducers : {
-        toggleSearch: state => {
-            state.isHotelSearch = !state.isHotelSearch;
+        toggleSearch(state, action: PayloadAction<{ value: string }>){
+            state.searchFilter = action.payload.value;
         }
     }
 })  

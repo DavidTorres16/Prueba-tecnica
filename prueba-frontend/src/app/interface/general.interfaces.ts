@@ -28,3 +28,14 @@ export interface reserveInterface{
 export interface dataInterface {
     data: hotelInterface | roomInterface;
 }
+
+export interface UserInterface {
+    id:string
+    name:string
+    lastName:string
+    birthDate:Date
+    gender:string
+    docType:string
+    emai:string
+    phoneNumber:string
+}

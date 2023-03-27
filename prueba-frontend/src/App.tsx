@@ -4,6 +4,7 @@ import { AdminPage} from '@pages/adminPage'
 import './App.css'
 import { useAppSelector } from '@app/hooks'
 import { RootState } from '@app/store'
+import { SingIn } from '@pages/SingIn'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path='/' element={<MainPage/>}/>
           <Route path='/admin' element={<AdminPage/>}/>
+          <Route path='/sing-in' element={<SingIn/>}/>
         </Routes>
       </BrowserRouter>
     </div>

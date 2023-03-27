@@ -8,16 +8,19 @@
 
 // Pages 
 @import 'pages/mainPage';
-@import 'components/ui/generalCard';
+@import 'pages/_sing_in';
 
 // Layout imports
 @import 'layout/banner';
 @import 'layout/search';
+@import 'layout/searchBar';
 
 // Ui components
+@import 'components/ui/generalCard';
 @import 'components/ui/title';
 @import 'components/ui/input';
 @import 'components/ui/input_search';
+@import 'components/ui/selector';
 
 :root {
     --primary-font: $font-poppins;
@@ -33,7 +36,7 @@
         
         --grey-color-100: #{$grey-color-100};
         --grey-color-200: #{$grey-color-200};
-        --gray-color-300: #{$grey-color-300};
+        --grey-color-300: #{$grey-color-300};
         --grey-color-400: #{$grey-color-400};
         --grey-color-500: #{$grey-color-500};
         --grey-color-600: #{$grey-color-600};
@@ -43,9 +46,10 @@
     }
     
     &--dark {
+        --primary-color: #{$primary-color};
         --primary-background: #{$primary-background};
         --secondary-gray: #{$secondary-gray};
-        
+
         --grey-color-100: #{$grey-color-100};
         --grey-color-200: #{$grey-color-200};
         --grey-color-300: #{$grey-color-300};
@@ -59,6 +63,6 @@
 }
 
 
-body {
+body, button, input {
     font-family: $font-poppins;
 }

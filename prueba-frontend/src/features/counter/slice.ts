@@ -1,16 +1,17 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit'
-import { InitialState } from 'app/interface/slices.interfaces'
+import { UserStatus } from '@app/interface/slices.interfaces'
 
-const initialState: InitialState = {
-    value : 1 
+const initialState: UserStatus = {
+    status: "active",
+    userPermissions: "admin"
 }
 
-export const counterSlice = createSlice({
+export const permissionsSlice = createSlice({
     name : "counter",
     initialState,
     reducers : {
-        incrementState : (currentState) =>{
-            currentState.value += 1
+        changePermissions : (currentState) =>{
+            currentState.userPermissions == "none"
         }
     }
 
@@ -24,5 +25,5 @@ export const fetchApi = createAsyncThunk("counterFetch", async (currentState:any
 
 })
 
-export const {incrementState} = counterSlice.actions
-export default counterSlice.reducer
+export const {changePermissions} = permissionsSlice.actions
+export default permissionsSlice.reducer
