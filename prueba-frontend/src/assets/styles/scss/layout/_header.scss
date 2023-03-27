@@ -1,0 +1,10 @@
+.header__app {
+    background: var(--grey-color-100);
+    width: 100%;
+
+    .__flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
