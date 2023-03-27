@@ -5,6 +5,7 @@ import './App.css'
 import { useAppSelector } from '@app/hooks'
 import { RootState } from '@app/store'
 import { SingIn } from '@pages/SingIn'
+import { Header } from '@components/layout/Header'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className={`theme--${theme.theme}`}>
       <BrowserRouter>
+        <Header/>
         <Routes>
           <Route path='/' element={<MainPage/>}/>
           <Route path='/admin' element={<AdminPage/>}/>

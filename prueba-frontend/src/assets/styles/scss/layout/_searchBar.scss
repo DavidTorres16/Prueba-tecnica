@@ -3,18 +3,32 @@
     justify-content: center;
     flex-direction: column;
 
-    .filter__box{
+    .filter__bottom{
         display: flex;
-        align-items: center;
-        justify-content: end;
-        gap: 2em;
-
-        .filter__text{
+        justify-content: space-between;
+        
+        .filter__btn{
+            margin: 2em 0 0 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+    
+        .filter__box{
             display: flex;
             align-items: center;
-            justify-content: center;
-            margin: 2em 0 0 0;
-            color: var(--grey-color-400);
+            justify-content: end;
+            gap: 2em;
+    
+            .filter__text{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 2em 0 0 0;
+                color: var(--grey-color-400);
+            }
+    
         }
     }
+
 }

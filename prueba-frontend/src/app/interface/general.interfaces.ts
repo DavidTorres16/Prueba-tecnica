@@ -9,7 +9,7 @@ export interface hotelInterface{
 
 export interface roomInterface{
     id:number,
-    roomNumber: number,
+    roomNumber: string,
     baseCost:number,
     taxes:number,
     roomType: string,

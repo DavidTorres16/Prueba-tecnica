@@ -2,16 +2,43 @@ import React from 'react'
 import { dataInterface } from '@app/interface/general.interfaces'
 import { isHotel, isRoom } from '@app/interfaceValidators/generalnterfacesValidator'
 import { useAppSelector } from '@app/hooks'
+import { useDispatch } from 'react-redux'
+import { SelectItem } from '@features/pageState/SelectedItemSlice'
+import { toggleAction } from '@features/pageState/ActionSlice'
+import { toggleSearch } from '@features/pageState/searchSlice'
+import { Button } from './Button'
+import { roomDeleted } from '@features/pageState/roomSlice'
 
 
 export const GeneralCard = ({data}: dataInterface) => { 
     
+    const dispatch = useDispatch()
+
+    console.log(data);
+
+    const handleClick = () =>{
+        if (isHotel(data)) {
+            dispatch(SelectItem({value: {data:data}}))
+            dispatch(toggleAction({value:"createRoom"}))
+            dispatch(toggleSearch({value:"Habitaciones"}))
+        }
+    }
+
+    const handleEdit = () =>{
+        dispatch(SelectItem({value: {data:data}}))
+        dispatch(toggleAction({value:"editRoom"}))
+    }
+
+    const handleDelete = (id: number) =>{
+        dispatch(roomDeleted(id));
+    }
+    
   return (
-    <section className='card'>
+    <section className='card' onClick={handleClick}>
         {
             data != null && isHotel(data)?
             <>
-                <img src={data.img} alt="hotel image" className='card__image'/>
+            <img src={data.img} alt="hotel image" className='card__image'/>
                 <div className='card__body'>
                 
                     <section className='card__location__adress'>
@@ -43,7 +70,7 @@ export const GeneralCard = ({data}: dataInterface) => {
                     </section>
                 </div>
             </>
-            : data != null && isRoom(data)?
+            :
             <div className='card__body'>
 
                 <img src={data.img} alt="room image" className='card__image'/>
@@ -75,10 +102,10 @@ export const GeneralCard = ({data}: dataInterface) => {
                         <p>{data.taxes}</p>
                     </div>
                 </section>
-            </div>
-            :
-            <div>
-                No data
+                <div className='card__deployable__options'>
+                    <Button value='Eliminar' color='red' onAction={() =>{handleDelete(data.id)}}/>
+                    <Button value='Editar' onAction={handleEdit}/>
+                </div>
             </div>
         }
     </section>

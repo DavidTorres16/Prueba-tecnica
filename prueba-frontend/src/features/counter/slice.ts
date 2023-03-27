@@ -1,4 +1,4 @@
-import {createSlice, createAsyncThunk} from '@reduxjs/toolkit'
+import {createSlice, createAsyncThunk, PayloadAction} from '@reduxjs/toolkit'
 import { UserStatus } from '@app/interface/slices.interfaces'
 
 const initialState: UserStatus = {
@@ -7,11 +7,13 @@ const initialState: UserStatus = {
 }
 
 export const permissionsSlice = createSlice({
-    name : "counter",
+    name : "permissions",
     initialState,
     reducers : {
-        changePermissions : (currentState) =>{
-            currentState.userPermissions == "none"
+        changePermissions : (currentState, action: PayloadAction<{ value: UserStatus }>) =>{
+            currentState.userPermissions == action.payload.value.userPermissions;
+            currentState.status == action.payload.value.status
+            currentState.user == action.payload.value.user
         }
     }
 

@@ -23,19 +23,7 @@ export const MainPage = () => {
         img: 'https://images.unsplash.com/photo-1517840901100-8179e982acb7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'    
     }
 
-    const habitaciones: roomInterface = {
-        id:1,
-        roomNumber: 1,
-        baseCost:600,
-        taxes:10,
-        roomType:"De lujo",
-        hotelId:1,
-        userId:1,
-        img: 'https://images.unsplash.com/photo-1517252441880-7c0968fc8513?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80'
-    }
-
     const dataObject = {data: hotel}
-    const dataObject2 = {data:habitaciones}
 
     let arrayDatos: dataInterface[] = [
         dataObject,
@@ -43,17 +31,8 @@ export const MainPage = () => {
         dataObject
     ] 
 
-    if(searchFilter == "Habitaciones"){
-        arrayDatos = [
-            dataObject2,
-            dataObject2,
-            dataObject2
-        ] 
-    }
-
     return (
         <main className='main'>
-            <Header/>
             <Banner 
                 titleValue='Descubre los mejores hospedajes'
                 titleColor='secondary'

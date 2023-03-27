@@ -1,25 +1,4 @@
-.card{
-    margin: 20px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-radius: 20px;
-    background-color: #ffff;
-    box-shadow: var(--grey-color-200) 2px 4px 9px;
-    gap: 20px;
-    color: var(--grey-color-500);
-    overflow: hidden;
-    height: 15em;
-    transition: ease-in-out .3s;
-
-
-    .card__image{
-        width: 20em;
-        height:100%;
-        border-radius: 20px 0px 0px 20px;
-        object-fit: cover;
-    }
+.shared__styles{
 
     .card__body{
         display: flex;
@@ -32,7 +11,7 @@
             justify-content: space-between;
             border-bottom: 2px solid var(--primary-color);
             padding: 20px 40px 20px 0px;
-            margin: 20px ;
+            margin: 0px 20px 20px 20px ;
             gap: 15px;
 
             .name{
@@ -62,7 +41,72 @@
         transform: scale(99%);
         box-shadow: var(--grey-color-200) 2px 3px 3px;
     }
+}
 
-    
+.card{
+    margin: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #ffff;
+    box-shadow: var(--grey-color-200) 2px 4px 9px;
+    gap: 20px;
+    color: var(--grey-color-500);
+    overflow: hidden;
+    height: 15em;
+    transition: ease-in-out .3s;
+    position: relative;
+    overflow: hidden;
+
+
+    .card__image{
+        width: 20em;
+        height:100%;
+        border-radius: 20px 0px 0px 20px;
+        object-fit: cover;
+    }
+
+    @extend .shared__styles;
+
+
+    .card__deployable__options {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 0.3s ease;
+        transform: translateX(-101%);
+    }
+
+    &:hover .card__deployable__options {
+        transform: translateX(0%);
+        left: 0;
+        overflow: visible;
+      }
+}
+
+.card__vertical{
+
+    margin: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #ffff;
+    box-shadow: var(--grey-color-200) 2px 4px 9px;
+    color: var(--grey-color-500);
+    overflow: hidden;
+    transition: ease-in-out .3s;
+
+    .card__image{
+        width: 22.5em;
+        height:100%;
+        border-radius: 20px 20px 0px 0px;
+        object-fit: cover;
+    }
+
+    @extend .shared__styles;
 }
 

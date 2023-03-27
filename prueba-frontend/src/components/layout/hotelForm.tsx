@@ -6,7 +6,7 @@ import React from 'react'
 import { hotelInterface } from '@app/interface/general.interfaces';
 
 
-export const hotelForm = () => {
+export const HotelForm = () => {
 
     let initialValues: hotelInterface = { 
         id:0,
@@ -85,14 +85,14 @@ export const hotelForm = () => {
                         <Input
                             name="img"
                             type="dile"
-                            placeholder='Ingresa la foto del hotel'
+                            placeholder='Ingresa el link de la foto del hotel'
                         />
                         <p className='error__form'>
                             <ErrorMessage name="img" />
                         </p>
                     </div>
                     {/* <button type="submit">Submit</button> */}
-                    <Button value='Ingresar' />
+                    <Button value='Crear' />
                 </Form>
             )}
         </Formik>
